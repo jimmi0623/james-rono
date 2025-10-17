@@ -1,0 +1,58 @@
+run this command: "
+npm install three vanta"
+
+
+Create a new file:src/components/AnimatedBackground.jsx
+
+"
+import React, { useEffect, useRef } from "react";
+import * as THREE from "three";
+import WAVES from "vanta/dist/vanta.waves.min";
+
+const AnimatedBackground = () => {
+  const vantaRef = useRef(null);
+  const vantaEffect = useRef(null);
+
+  useEffect(() => {
+    if (!vantaEffect.current) {
+      vantaEffect.current = WAVES({
+        el: vantaRef.current,
+        THREE,
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x0d6efd,       // primary wave color (Bootstrap blue)
+        shininess: 60.0,
+        waveHeight: 20.0,
+        waveSpeed: 0.8,
+        zoom: 1.1,
+        backgroundColor: 0x000000, // dark background for contrast
+      });
+    }
+
+    return () => {
+      if (vantaEffect.current) vantaEffect.current.destroy();
+    };
+  }, []);
+
+  return (
+    <div
+      ref={vantaRef}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: -1,
+      }}
+    />
+  );
+};
+
+export default AnimatedBackground;
+"

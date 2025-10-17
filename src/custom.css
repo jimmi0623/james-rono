@@ -1,0 +1,76 @@
+/* Custom styling for portfolio website */
+
+/* Navbar pill styling */
+.nav-pill {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.nav-pill:hover {
+  background-color: rgba(13, 110, 253, 0.4);
+  transform: translateY(-2px);
+}
+
+.active-nav-pill {
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.2);
+}
+.my-style{
+  background-image: linear-gradient(108deg,#0079d0 0,#9e52d8 32%,#da365c 84%,#d04901 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Parallax scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.parallax-container {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.section-container {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+/* Animated background for home page */
+.home-section {
+  position: relative;
+}
+
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Social icon animations */
+.social-icon {
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
