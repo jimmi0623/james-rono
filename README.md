@@ -1,46 +1,117 @@
-# Modern Portfolio Website
+# James Rono's Portfolio
 
-A responsive, feature-rich portfolio website built with React, Bootstrap, and Framer Motion.
+A modern, responsive portfolio website showcasing my professional work, skills, and experience. Built with React and featuring smooth animations, dark mode support, and an interactive user interface.
 
-## Features
+![React](https://img.shields.io/badge/React-19.2.0-61DAFB?logo=react&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.8-7952B3?logo=bootstrap&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-7.9.4-CA4245?logo=react-router&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.23-0055FF?logo=framer&logoColor=white)
 
+## 🚀 Features
+
+- **Modern UI/UX**: Clean and professional design with smooth animations
 - **Responsive Design**: Fully responsive layout that works on all devices
-- **Dark/Light Mode**: Toggle between dark and light themes with persistent user preference
-- **Parallax Scrolling**: Smooth scrolling effect between sections
-- **Scrollspy Navigation**: Navbar highlights the current section as you scroll
-- **Animated UI Elements**: Engaging animations using Framer Motion
-- **Section-Based Layout**:
-  - Home with animated background
-  - About with skills and expertise
-  - Services with animated cards
-  - Projects showcase
-  - Experience timeline
-  - Education history
-  - Contact form
-- **Social Media Integration**: Animated social media links in the footer
-- **Modern UI Components**: 
-  - Pill-style navigation
-  - Card components with hover effects
-  - Animated icons
-  - Responsive mobile menu
+- **Dark/Light Mode**: Theme switcher with system preference detection
+- **Interactive Elements**: Engaging user interface with motion effects
+- **Section Navigation**: Smooth scrolling between different portfolio sections
+- **Dynamic Background**: Interactive animated background effects
+- **Performance Optimized**: Fast loading times and optimized assets
 
-## Technologies Used
+## 💻 Tech Stack
 
-- **React**: Frontend library for building user interfaces
-- **React Router**: For navigation
-- **React Bootstrap**: UI component library
-- **Framer Motion**: Animation library
-- **React Icons**: Icon library
-- **CSS3**: Custom styling with CSS3
+### Core Technologies
+- **React**: v19.2.0 - Main frontend framework
+- **React Router**: v7.9.4 - For seamless navigation
+- **Bootstrap**: v5.3.8 - UI framework for responsive design
+- **React Bootstrap**: v2.10.10 - React components for Bootstrap
+- **Framer Motion**: v12.23.24 - For smooth animations and transitions
 
-## Getting Started
+### Animation & Visual Effects
+- **Three.js**: v0.180.0 - 3D graphics and effects
+- **Vanta.js**: v0.5.24 - Animated backgrounds
+- **TSParticles**: v3.9.1 - Interactive particle effects
 
-### Prerequisites
+### Development Tools
+- **React Scripts**: v5.0.1 - Development and build tools
+- **ESLint**: Code quality and style checking
+- **Jest & Testing Library**: For unit and integration testing
 
-- Node.js (v14 or later)
-- npm or yarn
+## 🏗️ Project Structure
 
-### Installation
+```
+portfolio/
+├── public/             # Public assets and HTML template
+├── src/
+│   ├── assets/        # Images, fonts, and other static assets
+│   ├── components/    # Reusable React components
+│   ├── pages/         # Main page components
+│   ├── App.js         # Root React component
+│   └── custom.css     # Custom styling
+└── package.json       # Project dependencies and scripts
+```
 
+## 🛠️ Setup and Installation
 
-4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jimmi0623/james-rono.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   cd james-rono
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+## 🔧 Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App
+
+## 🌐 Browser Support
+
+The portfolio website is optimized for:
+- Latest versions of Chrome, Firefox, Safari, and Edge
+- Mobile browsers on iOS and Android devices
+
+## 📱 Responsive Design
+
+The website is fully responsive and optimized for:
+- Desktop computers (1024px and above)
+- Tablets (768px to 1023px)
+- Mobile devices (320px to 767px)
+
+## 🎨 Theme Support
+
+- Light and Dark mode support
+- System preference detection
+- Persistent theme selection
+
+## 🤝 Contributing
+
+Feel free to fork this repository and submit pull requests. For major changes, please open an issue first to discuss what you would like to change.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📧 Contact
+
+James Rono - [Contact through the portfolio website]
+
+Project Link: [https://github.com/jimmi0623/james-rono](https://github.com/jimmi0623/james-rono)
+
+---
+⭐ Star this repo if you find it helpful!
