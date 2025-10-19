@@ -1,12 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaGithub, FaLinkedin, FaInstagram, FaDiscord } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { ThemeContext } from '../App';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
-  const { darkMode } = useContext(ThemeContext);
   
   const socialLinks = [
     { icon: <FaGithub />, url: "https://github.com/jimmi0623", color: "#333" },
@@ -17,7 +15,7 @@ const Footer = () => {
   ];
   
   return (
-    <footer className={`py-4 mt-5 ${darkMode ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
+    <footer className="py-4 mt-5 bg-dark text-light">
       <Container>
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-start mb-3 mb-md-0">
@@ -37,7 +35,7 @@ const Footer = () => {
                     y: -5,
                     color: social.color
                   }}
-                  initial={{ color: darkMode ? "#fff" : "#212529" }}
+                  initial={{ color: "#fff" }}
                   transition={{ 
                     type: "spring", 
                     stiffness: 300
@@ -49,7 +47,7 @@ const Footer = () => {
                     width: "40px",
                     height: "40px",
                     borderRadius: "50%",
-                    background: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.05)"
+                    background: "rgba(255,255,255,0.1)"
                   }}
                 >
                   {social.icon}

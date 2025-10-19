@@ -1,18 +1,13 @@
-import React, { useContext } from 'react';
+
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { FaArrowRight } from 'react-icons/fa';
-import { ThemeContext, ScrollContext } from '../App';
-import AnimatedBackground from '../components/AnimatedBackground';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const { darkMode } = useContext(ThemeContext);
-  const { scrollToSection } = useContext(ScrollContext);
-
   return (
     <section className="home-section position-relative overflow-hidden min-vh-100 d-flex align-items-center">
-      <AnimatedBackground />
-      
       <Container className="position-relative" style={{ zIndex: 1 }}>
         <Row className="justify-content-center text-center py-5">
           <Col md={8}>
@@ -43,12 +38,12 @@ const Home = () => {
               </p>
               <div className="d-flex justify-content-center gap-3 flex-column flex-sm-row">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button onClick={() => scrollToSection('projects')} variant="primary" size="lg" className="d-flex align-items-center justify-content-center gap-2">
+                  <Button as={Link} to="/projects" variant="primary" size="lg" className="d-flex align-items-center justify-content-center gap-2">
                     View My Work <FaArrowRight />
                   </Button>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button onClick={() => scrollToSection('contact')} variant="outline-primary" size="lg">
+                  <Button as={Link} to="/contact" variant="outline-primary" size="lg">
                     Contact Me
                   </Button>
                 </motion.div>
@@ -62,3 +57,4 @@ const Home = () => {
 };
 
 export default Home;
+

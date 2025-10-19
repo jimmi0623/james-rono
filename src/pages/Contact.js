@@ -9,7 +9,6 @@ import {
   FaMapMarkerAlt,
   FaGithub,
   FaLinkedin,
-  FaInstagram,
   FaDiscord
 } from "react-icons/fa";
 

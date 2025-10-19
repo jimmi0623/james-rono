@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { FaSun, FaMoon, FaBars } from 'react-icons/fa';
-import { ThemeContext, ScrollContext } from '../App';
+import { FaBars } from 'react-icons/fa';
+import { ScrollContext } from '../App';
 import { 
   Navbar as BootstrapNavbar, 
   Nav, 
@@ -11,7 +10,7 @@ import {
 } from 'react-bootstrap';
 
 const Navbar = () => {
-  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
+  
   const { activeSection, scrollToSection } = useContext(ScrollContext);
   const [showOffcanvas, setShowOffcanvas] = useState(false);
 
@@ -23,13 +22,13 @@ const Navbar = () => {
     handleClose();
   };
 
-  const navLinkClass = `fw-medium px-3 py-2 rounded-pill mx-1 ${darkMode ? 'text-light' : 'text-dark'} nav-pill`;
-  const activeNavLinkClass = `${navLinkClass} ${darkMode ? 'bg-primary text-white' : 'bg-primary text-white'} active-nav-pill`;
+  const navLinkClass = `fw-medium px-3 py-2 rounded-pill mx-1 text-light nav-pill`;
+  const activeNavLinkClass = `${navLinkClass} bg-primary text-white active-nav-pill`;
 
   return (
     <BootstrapNavbar 
-      bg={darkMode ? "dark" : "light"} 
-      variant={darkMode ? "dark" : "light"} 
+      bg="dark"
+      variant="dark"
       expand="lg" 
       className="py-3 shadow-sm sticky-top"
     >
@@ -44,7 +43,7 @@ const Navbar = () => {
         
 		{/*Mobile Toggle Button */}
         <Button 
-          variant={darkMode ? "outline-light" : "outline-dark"}
+          variant="outline-light"
           className="d-lg-none"
           onClick={handleShow}
         >
@@ -78,9 +77,9 @@ const Navbar = () => {
           show={showOffcanvas} 
           onHide={handleClose} 
           placement="end"
-          className={darkMode ? "bg-dark text-light" : "bg-light text-dark"}
+          className="bg-dark text-light"
         >
-          <Offcanvas.Header closeButton>
+          <Offcanvas.Header closeButton closeVariant="white">
             <Offcanvas.Title className="fw-bold">Menu</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
