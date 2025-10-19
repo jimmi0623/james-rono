@@ -14,7 +14,7 @@ const Projects = () => {
       technologies: ['Node.js', 'OpenCV', 'FastAPI', 'Python'],
       github: 'https://github.com/jimmi0623/video-annotator',
       demo: 'https://video-annotator.vercel.app',
-      image: '/va.png',
+      image: '%PUBLIC_URL%/va.png',
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Express', 'RabbitMQ', 'MySQL'],
       github: 'https://github.com/jimmi0623/ticketing-platform',
       demo: 'https://ticketing-platform.vercel.app',
-      image: '/tems.png',
+      image: '%PUBLIC_URL%/tems.png',
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const Projects = () => {
       technologies: ['Python', 'Django', 'TensorFlow'],
       github: 'https://github.com/jimmi0623/caption_timing_optimizer',
       demo: null,
-      image: '/cto.png',
+      image: '%PUBLIC_URL%/cto.png',
     },
     {
       id: 4,
@@ -44,7 +44,7 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Framer Motion'],
       github: 'https://github.com/jimmi0623/portfolio',
       demo: null,
-      image: '/portfolio.png',
+      image: '%PUBLIC_URL%/port.png',
     },
     {
       id: 5,
@@ -54,7 +54,7 @@ const Projects = () => {
       technologies: ['Python', 'OpenAI API', 'Flask'],
       github: 'https://github.com/jimmi0623/video-caption-quality-checker',
       demo: null,
-      image: '/cqc.png',
+      image: '%PUBLIC_URL%/cqc.png',
     },
   ];
 
