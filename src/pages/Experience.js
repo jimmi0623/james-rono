@@ -2,149 +2,272 @@ import React from 'react';
 import { Container, Row, Col, Card, ListGroup } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { FaBriefcase, FaCalendarAlt, FaTrophy } from 'react-icons/fa';
+import AnimatedBackground from "../components/AnimatedBackground"; 
 
 const Experience = () => {
-const experiences = [
-  {
-    company: 'JR Technologies',
-    position: 'Full Stack Developer',
-    period: 'Jan 2020 – Present',
-    description: 'Design, develop, and deploy scalable web applications integrating AI-driven tools and automation workflows.',
-	achievements: [
-	  'Architected and deployed scalable full-stack web applications using modern stack and tools',
-	  'Integrated APIs, databases, and third-party services to deliver seamless, data-driven user experiences',
-	  'Optimized application performance, security, and code quality through testing and CI/CD automation',
-	  'Collaborated with cross-functional teams to design, build, and maintain end-to-end software solutions'
-	]
-
-  },
-  {
-    company: 'Apollo Agriculture',
-    position: 'AI Evaluator & Data Annotator',
-    period: 'Apr 2025 – Jul 2025',
-    description: 'Evaluated AI-generated farmer advisories and improved model accuracy through dataset refinement.',
-    achievements: [
-      'Improved model precision by 10% through targeted dataset enhancements',
-      'Refined prompt templates for agronomic classification and forecasting',
-      'Collaborated with ML engineers to ensure high-quality AI outputs'
-    ]
-  },
-  {
-    company: 'Office of the Data Protection Commissioner',
-    position: 'AI Evaluator',
-    period: 'Feb 2024 – May 2024',
-    description: 'Supported the rollout of the “Linda Data” chatbot by localizing datasets and evaluating AI responses.',
-    achievements: [
-      'Localized Swahili training data for improved chatbot performance',
-      'Conducted QA testing and feedback loops for AI model responses',
-      'Enhanced language coverage and accuracy across multiple user scenarios'
-    ]
-  },
-  {
-    company: 'Kuzi Project',
-    position: 'AI Data Contributor',
-    period: 'Sep 2024 – Nov 2024',
-    description: 'Contributed to locust forecasting AI models through geospatial and satellite imagery annotation.',
-    achievements: [
-      'Boosted model precision by 12% via accurate dataset labeling',
-      'Annotated satellite and geospatial data using Label Studio and QGIS',
-      'Supported model validation and consistency checks for agricultural forecasting'
-    ]
-  },
-  {
-    company: 'Safaricom Plc',
-    position: 'Data Analyst',
-    period: 'Oct 2014 – 2020',
-    description: 'Automated enterprise data reports and improved data governance systems for business intelligence.',
-    achievements: [
-      'Developed automated reporting dashboards using Python and SQL',
-      'Enhanced data consistency and validation across enterprise systems',
-      'Collaborated with IT teams to streamline analytics workflows'
-    ]
-  },
-  {
-    company: 'Kenya National Bureau of Statistics',
-    position: 'Research Assistant',
-    period: 'Apr 2011 – Jul 2014',
-    description: 'Conducted regional data collection, analysis, and reporting for national development surveys.',
-    achievements: [
-      'Collected and processed large-scale field data with accuracy and consistency',
-      'Supported statistical analysis for socio-economic indicators',
-      'Prepared regional data reports used in national policy briefs'
-    ]
-  }
-];
+  const experiences = [
+    {
+      company: 'JR Technologies',
+      position: 'Full Stack Developer',
+      period: 'Jan 2020 – Present',
+      description:
+        'Design, develop, and deploy scalable web applications integrating AI-driven tools and automation workflows.',
+      achievements: [
+        'Architected and deployed scalable full-stack web applications using modern stack and tools',
+        'Integrated APIs, databases, and third-party services to deliver seamless, data-driven user experiences',
+        'Optimized application performance, security, and code quality through testing and CI/CD automation',
+        'Collaborated with cross-functional teams to design, build, and maintain end-to-end software solutions',
+      ],
+    },
+    {
+      company: 'Apollo Agriculture',
+      position: 'AI Evaluator & Data Annotator',
+      period: 'Apr 2025 – Jul 2025',
+      description:
+        'Evaluated AI-generated farmer advisories and improved model accuracy through dataset refinement.',
+      achievements: [
+        'Improved model precision by 10% through targeted dataset enhancements',
+        'Refined prompt templates for agronomic classification and forecasting',
+        'Collaborated with ML engineers to ensure high-quality AI outputs',
+      ],
+    },
+    {
+      company: 'Office of the Data Protection Commissioner',
+      position: 'AI Evaluator',
+      period: 'Feb 2024 – May 2024',
+      description:
+        'Supported the rollout of the “Linda Data” chatbot by localizing datasets and evaluating AI responses.',
+      achievements: [
+        'Localized Swahili training data for improved chatbot performance',
+        'Conducted QA testing and feedback loops for AI model responses',
+        'Enhanced language coverage and accuracy across multiple user scenarios',
+      ],
+    },
+    {
+      company: 'Kuzi Project',
+      position: 'AI Data Contributor',
+      period: 'Sep 2024 – Nov 2024',
+      description:
+        'Contributed to locust forecasting AI models through geospatial and satellite imagery annotation.',
+      achievements: [
+        'Boosted model precision by 12% via accurate dataset labeling',
+        'Annotated satellite and geospatial data using Label Studio and QGIS',
+        'Supported model validation and consistency checks for agricultural forecasting',
+      ],
+    },
+    {
+      company: 'Safaricom Plc',
+      position: 'Data Analyst',
+      period: 'Oct 2014 – 2020',
+      description:
+        'Automated enterprise data reports and improved data governance systems for business intelligence.',
+      achievements: [
+        'Developed automated reporting dashboards using Python and SQL',
+        'Enhanced data consistency and validation across enterprise systems',
+        'Collaborated with IT teams to streamline analytics workflows',
+      ],
+    },
+    {
+      company: 'Kenya National Bureau of Statistics',
+      position: 'Research Assistant',
+      period: 'Apr 2011 – Jul 2014',
+      description:
+        'Conducted regional data collection, analysis, and reporting for national development surveys.',
+      achievements: [
+        'Collected and processed large-scale field data with accuracy and consistency',
+        'Supported statistical analysis for socio-economic indicators',
+        'Prepared regional data reports used in national policy briefs',
+      ],
+    },
+  ];
 
   return (
-    <section className="py-5">
+    <section
+      className="py-5 position-relative"
+      style={{
+        background: 'linear-gradient(180deg, #0b0e13 0%, #080a0d 100%)',
+        color: '#e5e7eb',
+      }}
+    >
+	<AnimatedBackground />
       <Container>
+        {/* Section Header */}
         <Row className="mb-5 text-center">
           <Col>
-            <h2 className="display-5 fw-bold mb-3">Work Experience</h2>
-            <p className="lead text-muted">My professional journey and accomplishments</p>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2
+                className="display-5 fw-bold mb-3 my-style"
+                style={{
+                
+                  textShadow: '0 0 12px rgba(76,201,240,0.3)',
+                  letterSpacing: '1px',
+                }}
+              >
+                Work Experience
+              </h2>
+              <p className="lead" style={{ color: '#9ca3af', fontSize: '1rem' }}>
+                My professional journey and accomplishments
+              </p>
+            </motion.div>
           </Col>
         </Row>
-        
+
+        {/* Timeline */}
         <div className="position-relative">
-          {/* Timeline line */}
-          <div className="position-absolute h-100" style={{ left: '15px', width: '2px', backgroundColor: '#dee2e6', top: 0, zIndex: 0 }}></div>
-          
+          <div
+            className="position-absolute h-100"
+            style={{
+              left: '20px',
+              width: '2px',
+              background:
+                'linear-gradient(to bottom, rgba(0,191,255,0.8), rgba(0,255,255,0.1))',
+              boxShadow: '0 0 15px rgba(0,191,255,0.3)',
+              zIndex: 0,
+              borderRadius: '4px',
+            }}
+          ></div>
+
           <Row className="g-4">
             {experiences.map((exp, index) => (
               <Col key={index} xs={12}>
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.2 }}
+                  transition={{ duration: 0.3, delay: index * 0.15 }}
+                  whileHover={{
+                    scale: 1.02,
+                    y: -4,
+                    boxShadow:
+                      '0 0 25px rgba(0,191,255,0.35), 0 0 50px rgba(0,191,255,0.2)',
+                  }}
                 >
-<Card className="border-0 shadow-sm mb-4 ms-4 position-relative">
-  {/* Timeline dot */}
-  <div
-    className="position-absolute bg-primary rounded-circle p-2 text-white"
-    style={{ left: '-20px', top: '25px', zIndex: 1 }}
-  >
-    <FaBriefcase />
-  </div>
+                  <Card
+                    className="border-0 shadow-sm mb-4 ms-4 position-relative"
+                    style={{
+                      background: 'rgba(255,255,255,0.03)',
+                      borderRadius: '1rem',
+                      border: '1px solid rgba(255,255,255,0.08)',
+                      boxShadow: '0 0 12px rgba(0,191,255,0.05)',
+                      backdropFilter: 'blur(12px)',
+                      transition: 'all 0.4s ease',
+                    }}
+                  >
+                    {/* Timeline Dot */}
+                    <div
+                      className="position-absolute bg-info rounded-circle text-white d-flex align-items-center justify-content-center"
+                      style={{
+                        left: '-22px',
+                        top: '28px',
+                        width: '28px',
+                        height: '28px',
+                        boxShadow:
+                          '0 0 12px rgba(0,191,255,0.5), 0 0 24px rgba(0,255,255,0.25)',
+                      }}
+                    >
+                      <FaBriefcase size={14} />
+                    </div>
 
-  <Card.Body className="p-4">
-    <Row className="align-items-start">
-      {/* Left section - Title, Company, Description */}
-      <Col md={8}>
-        <div className="mb-3 text-start">
-          <h3 className="fs-4 fw-bold mb-1 text-start">{exp.position}</h3>
-          <p className="text-primary mb-0 text-start">{exp.company}</p>
-        </div>
-        <p className="text-muted mb-3 text-start">{exp.description}</p>
-      </Col>
+                    <Card.Body className="p-4">
+                      <Row className="align-items-start">
+                        {/* Left section */}
+                        <Col md={8}>
+                          <div className="mb-2 text-start">
+                            <h3
+                              className="fw-bold mb-1 text-start"
+                              style={{ fontSize: '1.1rem', color: '#e2e8f0' }}
+                            >
+                              {exp.position}
+                            </h3>
+                            <p
+                              className="mb-0 text-start"
+                              style={{
+                                color: '#00d4ff',
+                                fontSize: '0.9rem',
+                                textShadow: '0 0 8px rgba(0,191,255,0.3)',
+                              }}
+                            >
+                              {exp.company}
+                            </p>
+                          </div>
+                          <p
+                            className="mb-2 text-start"
+                            style={{
+                              color: '#cbd5e1',
+                              fontSize: '0.85rem',
+                              lineHeight: '1.6',
+                            }}
+                          >
+                            {exp.description}
+                          </p>
+                        </Col>
 
-      {/* Right section - Period */}
-      <Col md={4} className="d-flex justify-content-md-end align-items-start">
-        <div className="d-flex align-items-center text-muted">
-          <FaCalendarAlt className="me-2" />
-          <span>{exp.period}</span>
-        </div>
-      </Col>
-    </Row>
+                        {/* Right section - Period */}
+                        <Col
+                          md={4}
+                          className="d-flex justify-content-md-end align-items-start"
+                        >
+                          <div
+                            className="d-flex align-items-center"
+                            style={{ color: '#9ca3af', fontSize: '0.8rem' }}
+                          >
+                            <FaCalendarAlt className="me-2 text-info" />
+                            <span>{exp.period}</span>
+                          </div>
+                        </Col>
+                      </Row>
 
-    {/* Achievements Section */}
-    <div className="mt-3">
-      <div className="d-flex align-items-center mb-3">
-        <FaTrophy className="text-warning me-2" />
-        <h4 className="fs-5 fw-bold mb-0">Key Achievements</h4>
-      </div>
-      <ListGroup variant="flush">
-        {exp.achievements.map((achievement, idx) => (
-          <ListGroup.Item key={idx} className="border-0 ps-0 py-1">
-            <div className="d-flex text-start">
-              <div className="me-3">•</div>
-              <div>{achievement}</div>
-            </div>
-          </ListGroup.Item>
-        ))}
-      </ListGroup>
-    </div>
-  </Card.Body>
-</Card>
+                      {/* Achievements */}
+                      <div className="mt-3">
+                        <div className="d-flex align-items-center mb-2">
+                          <FaTrophy
+                            className="me-2"
+                            style={{
+                              color: '#facc15',
+                              filter: 'drop-shadow(0 0 8px rgba(250,204,21,0.4))',
+                            }}
+                          />
+                          <h4
+                            className="fw-bold mb-0"
+                            style={{
+                              fontSize: '0.95rem',
+                              color: '#fcd34d',
+                            }}
+                          >
+                            Key Achievements
+                          </h4>
+                        </div>
+                        <ListGroup variant="flush">
+                          {exp.achievements.map((achievement, idx) => (
+                            <ListGroup.Item
+                              key={idx}
+                              className="border-0 ps-0 py-1 bg-transparent"
+                              style={{
+                                color: '#cbd5e1',
+                                fontSize: '0.8rem',
+                                display: 'flex',
+                                alignItems: 'flex-start',
+                              }}
+                            >
+                              <span
+                                style={{
+                                  color: '#00e0ff',
+                                  marginRight: '8px',
+                                  lineHeight: '1.3',
+                                }}
+                              >
+                                •
+                              </span>
+                              {achievement}
+                            </ListGroup.Item>
+                          ))}
+                        </ListGroup>
+                      </div>
+                    </Card.Body>
+                  </Card>
                 </motion.div>
               </Col>
             ))}

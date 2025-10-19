@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FaGithub, FaLinkedin, FaDiscord } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
+import FloatingParticles from "../components/FloatingParticles";
 
 const Footer = () => {
   
@@ -16,6 +17,7 @@ const Footer = () => {
   
   return (
     <footer className="py-4 mt-5 bg-dark text-light">
+	  <FloatingParticles color="#00f0ff" count={120} />
       <Container>
         <Row className="align-items-center">
           <Col md={6} className="text-center text-md-start mb-3 mb-md-0">
