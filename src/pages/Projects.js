@@ -12,8 +12,18 @@ import cqcImg from '../assets/cqc.png';
 
 const Projects = () => {
   const projects = [
-    {
+        {
       id: 1,
+      title: 'Portfolio',
+      description:
+        'A responsive portfolio site built with a modern tech stack showcasing my full stack engineering skills and competencies.',
+      technologies: ['React', 'Node.js', 'Framer Motion'],
+      github: 'https://github.com/jimmi0623/portfolio',
+      demo: null,
+      image: portImg,
+    },
+    {
+      id: 2,
       title: 'Video Annotator',
       description:
         'A web-based tool for annotating videos frame by frame with customizable labels & metadata export, YOLOv8 Integration, Object Tracking, SAM Integration & Batch processing.',
@@ -23,7 +33,7 @@ const Projects = () => {
       image: vaImg,
     },
     {
-      id: 2,
+      id: 3,
       title: 'Ticketing and Events Platform',
       description:
         'A ticketing and event management platform supporting user authentication and real-time booking.',
@@ -33,7 +43,7 @@ const Projects = () => {
       image: temsImg,
     },
     {
-      id: 3,
+      id: 4,
       title: 'Caption Timing Optimizer',
       description:
         'An intelligent tool for automatically adjusting subtitle and caption timings for better synchronization.',
@@ -42,16 +52,7 @@ const Projects = () => {
       demo: null,
       image: ctoImg,
     },
-    {
-      id: 4,
-      title: 'Portfolio',
-      description:
-        'A responsive portfolio site built with a modern tech stack showcasing my full stack engineering skills and competencies.',
-      technologies: ['React', 'Node.js', 'Framer Motion'],
-      github: 'https://github.com/jimmi0623/portfolio',
-      demo: null,
-      image: portImg,
-    },
+
     {
       id: 5,
       title: 'Video Caption Quality Checker',

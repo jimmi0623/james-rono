@@ -55,30 +55,11 @@ const Experience = () => {
         'Supported model validation and consistency checks for agricultural forecasting',
       ],
     },
-    {
-      company: 'Safaricom Plc',
-      position: 'Data Analyst',
-      period: 'Oct 2014 – 2020',
-      description:
-        'Automated enterprise data reports and improved data governance systems for business intelligence.',
-      achievements: [
-        'Developed automated reporting dashboards using Python and SQL',
-        'Enhanced data consistency and validation across enterprise systems',
-        'Collaborated with IT teams to streamline analytics workflows',
-      ],
-    },
-    {
-      company: 'Kenya National Bureau of Statistics',
-      position: 'Research Assistant',
-      period: 'Apr 2011 – Jul 2014',
-      description:
-        'Conducted regional data collection, analysis, and reporting for national development surveys.',
-      achievements: [
-        'Collected and processed large-scale field data with accuracy and consistency',
-        'Supported statistical analysis for socio-economic indicators',
-        'Prepared regional data reports used in national policy briefs',
-      ],
-    },
+  ];
+
+  const summarized = [
+    { company: 'Safaricom Plc', position: 'Data Analyst', period: 'Oct 2014 – 2020' },
+    { company: 'Kenya National Bureau of Statistics', position: 'Research Assistant', period: 'Apr 2011 – Jul 2014' },
   ];
 
   return (
@@ -89,7 +70,7 @@ const Experience = () => {
         color: '#e5e7eb',
       }}
     >
-	<AnimatedBackground />
+      <AnimatedBackground />
       <Container>
         {/* Section Header */}
         <Row className="mb-5 text-center">
@@ -102,7 +83,6 @@ const Experience = () => {
               <h2
                 className="display-5 fw-bold mb-3 my-style"
                 style={{
-                
                   textShadow: '0 0 12px rgba(76,201,240,0.3)',
                   letterSpacing: '1px',
                 }}
@@ -132,6 +112,7 @@ const Experience = () => {
           ></div>
 
           <Row className="g-4">
+            {/* First four detailed experiences */}
             {experiences.map((exp, index) => (
               <Col key={index} xs={12}>
                 <motion.div
@@ -173,7 +154,6 @@ const Experience = () => {
 
                     <Card.Body className="p-4">
                       <Row className="align-items-start">
-                        {/* Left section */}
                         <Col md={8}>
                           <div className="mb-2 text-start">
                             <h3
@@ -205,7 +185,6 @@ const Experience = () => {
                           </p>
                         </Col>
 
-                        {/* Right section - Period */}
                         <Col
                           md={4}
                           className="d-flex justify-content-md-end align-items-start"
@@ -220,7 +199,6 @@ const Experience = () => {
                         </Col>
                       </Row>
 
-                      {/* Achievements */}
                       <div className="mt-3">
                         <div className="d-flex align-items-center mb-2">
                           <FaTrophy
@@ -271,6 +249,53 @@ const Experience = () => {
                 </motion.div>
               </Col>
             ))}
+
+            {/* Summarized older experience */}
+            <Col xs={12}>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: 0.9 }}
+              >
+                <Card
+                  className="border-0 shadow-sm mb-4 ms-4 position-relative"
+                  style={{
+                    background: 'rgba(255,255,255,0.04)',
+                    borderRadius: '1rem',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    boxShadow: '0 0 12px rgba(0,191,255,0.05)',
+                    backdropFilter: 'blur(12px)',
+                  }}
+                >
+                  <div
+                    className="position-absolute bg-info rounded-circle text-white d-flex align-items-center justify-content-center"
+                    style={{
+                      left: '-22px',
+                      top: '28px',
+                      width: '28px',
+                      height: '28px',
+                      boxShadow:
+                        '0 0 12px rgba(0,191,255,0.5), 0 0 24px rgba(0,255,255,0.25)',
+                    }}
+                  >
+                    <FaBriefcase size={14} />
+                  </div>
+                  <Card.Body className="p-4">
+                    <h5
+                      className="fw-semibold mb-3"
+                      style={{ color: '#00d4ff', fontSize: '1rem' }}
+                    >
+                      Other Experiences
+                    </h5>
+                    {summarized.map((exp, idx) => (
+                      <p key={idx} style={{ marginBottom: '0.4rem', fontSize: '0.9rem', color: '#e2e8f0' }}>
+                        <strong>{exp.position}</strong>, {exp.company} 
+                      </p>
+                    ))}
+                  </Card.Body>
+                </Card>
+              </motion.div>
+            </Col>
           </Row>
         </div>
       </Container>
