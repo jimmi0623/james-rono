@@ -2,7 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Container, Row, Col, Card, Badge, Button } from 'react-bootstrap';
 import { FaGithub } from 'react-icons/fa';
-import AnimatedBackground from "../components/AnimatedBackground"; 
+
+import AnimatedBackground from "../components/AnimatedBackground";
+import vaImg from '../assets/va.png';
+import temsImg from '../assets/tems.png';
+import ctoImg from '../assets/cto.png';
+import portImg from '../assets/port.png';
+import cqcImg from '../assets/cqc.png';
 
 const Projects = () => {
   const projects = [
@@ -14,7 +20,7 @@ const Projects = () => {
       technologies: ['Node.js', 'OpenCV', 'FastAPI', 'Python'],
       github: 'https://github.com/jimmi0623/video-annotator',
       demo: 'https://video-annotator.vercel.app',
-      image: '../../va.png',
+      image: vaImg,
     },
     {
       id: 2,
@@ -24,7 +30,7 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Express', 'RabbitMQ', 'MySQL'],
       github: 'https://github.com/jimmi0623/ticketing-platform',
       demo: 'https://ticketing-platform.vercel.app',
-      image: '../public/tems.png',
+      image: temsImg,
     },
     {
       id: 3,
@@ -34,7 +40,7 @@ const Projects = () => {
       technologies: ['Python', 'Django', 'TensorFlow'],
       github: 'https://github.com/jimmi0623/caption_timing_optimizer',
       demo: null,
-      image: '/cto.png',
+      image: ctoImg,
     },
     {
       id: 4,
@@ -44,7 +50,7 @@ const Projects = () => {
       technologies: ['React', 'Node.js', 'Framer Motion'],
       github: 'https://github.com/jimmi0623/portfolio',
       demo: null,
-      image: '/port.png',
+      image: portImg,
     },
     {
       id: 5,
@@ -54,7 +60,7 @@ const Projects = () => {
       technologies: ['Python', 'OpenAI API', 'Flask'],
       github: 'https://github.com/jimmi0623/video-caption-quality-checker',
       demo: null,
-      image: '/cqc.png',
+      image: cqcImg,
     },
   ];
 

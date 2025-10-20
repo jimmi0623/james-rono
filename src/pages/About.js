@@ -97,7 +97,7 @@ const About = () => {
                 }}
               />
               <Image
-                src="/profilepic.jpg"
+                src="/profilepic.JPG"
                 roundedCircle
                 alt="Profile"
                 style={{
