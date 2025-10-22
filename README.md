@@ -16,6 +16,7 @@ A modern, responsive portfolio website showcasing my professional work, skills, 
 - **Section Navigation**: Smooth scrolling between different portfolio sections
 - **Dynamic Background**: Interactive animated background effects
 - **Performance Optimized**: Fast loading times and optimized assets
+- **EmailJS Contact Form**: Integrated contact form using EmailJS for direct email submissions
 
 ## 💻 Tech Stack
 
@@ -72,6 +73,12 @@ portfolio/
    ```bash
    npm run build
    ```
+
+5. **EmailJS Setup (Contact Form):**
+   - The contact form uses [EmailJS](https://www.emailjs.com/) to send emails directly to your inbox.
+   - You must configure your EmailJS account, service, and template for production use.
+   - Update your service ID, template ID, and public key in `src/pages/Contact.js` as described in the code comments.
+   - Form fields are mapped to template variables: `${name}`, `${email}`, `${message}`.
 
 ## 🔧 Available Scripts
 

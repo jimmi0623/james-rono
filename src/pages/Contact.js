@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
+import emailjs from '@emailjs/browser';
 import {
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
   FaGithub,
   FaLinkedin,
-  FaDiscord
+  FaDiscord,
+  FaGlobe
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import AnimatedBackground from "../components/AnimatedBackground"; 
@@ -16,7 +18,8 @@ const socialLinks = [
   { icon: <FaGithub />, url: "https://github.com/jimmi0623", color: "#00d4ff" },
   { icon: <FaLinkedin />, url: "https://linkedin.com/in/jimmi0623", color: "#0077B5" },
   { icon: <FaXTwitter />, url: "https://x.com/JimmiRonno", color: "#1DA1F2" },
-  { icon: <FaDiscord />, url: "https://discord.com/channels/mijj0623", color: "#5865F2" }
+  { icon: <FaDiscord />, url: "https://discord.com/channels/mijj0623", color: "#5865F2" },
+  { icon: <FaGlobe />, url: "https://james-rono.vercel.app", color: "#00e0ff" } // Website link
 ];
 
 const Contact = () => {
@@ -27,10 +30,38 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const [sending, setSending] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ show: false, success: false, message: '' });
+  const form = useRef();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Hi, kindly reach me via my e-mail, phone or social. Thank you!");
-    setFormData({ name: "", email: "", message: "" });
+    setSending(true);
+    setSubmitStatus({ show: false, success: false, message: '' });
+    
+    try {
+      await emailjs.sendForm(
+        'service_5yu89zk', // service ID
+        'template_dzxyybb', // template ID (correct this!)
+        form.current,
+        'bMhHlKK6bzTtk6sEo' // public key
+      );
+      
+      setSubmitStatus({
+        show: true,
+        success: true,
+        message: 'Message sent successfully! Thank you for reaching out.'
+      });
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      setSubmitStatus({
+        show: true,
+        success: false,
+        message: 'Failed to send message. Please contact me directly via email.'
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -108,7 +139,7 @@ const Contact = () => {
                 }}
               >
                 <Card.Body className="p-4 p-md-5">
-                  <Form onSubmit={handleSubmit} className="text-start">
+                  <Form ref={form} onSubmit={handleSubmit} className="text-start">
                     <Form.Group className="mb-3" controlId="name">
                       <Form.Label className="fw-semibold" style={{ color: "#a0aec0" }}>
                         Name
@@ -182,9 +213,19 @@ const Contact = () => {
                         onMouseLeave={(e) =>
                           (e.target.style.boxShadow = "0 0 12px rgba(0,191,255,0.4)")
                         }
+                        disabled={sending}
                       >
-                        Send Message
+                        {sending ? 'Sending...' : 'Send Message'}
                       </Button>
+                      
+                      {submitStatus.show && (
+                        <div
+                          className={`mt-3 text-${submitStatus.success ? 'success' : 'danger'}`}
+                          style={{ fontSize: '0.9rem' }}
+                        >
+                          {submitStatus.message}
+                        </div>
+                      )}
                     </div>
                   </Form>
                 </Card.Body>
@@ -213,12 +254,12 @@ const Contact = () => {
                   transition: "all 0.4s ease-in-out",
                 }}
               >
-                <Card.Body className="p-4">
+                <Card.Body className="p-4 pb-2">
                   <h5 className="fw-bold mb-3" style={{ color: "#00e0ff" }}>
                     Contact Information
                   </h5>
-                  <p className="mb-4" style={{ color: "#9ca3af", fontSize: "0.9rem" }}>
-                    Feel free to reach out directly or connect with me on any platform below.
+                  <p className="mb-2" style={{ color: "#9ca3af", fontSize: "0.9rem" }}>
+                    Feel free to reach out directly or connect.
                   </p>
 
                   <div className="d-flex flex-column gap-4 text-start">
@@ -251,6 +292,22 @@ const Contact = () => {
                     </div>
 
                     <div className="d-flex align-items-center">
+                      <FaGlobe className="me-3 text-info" />
+                      <div>
+                        <div className="fw-semibold text-light">Website</div>
+                        <a
+                          href="https://james-rono.vercel.app"
+                          className="text-decoration-none"
+                          style={{ color: "#a0aec0" }}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          james-rono.vercel.app
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="d-flex align-items-center">
                       <FaMapMarkerAlt className="me-3 text-info" />
                       <div>
                         <div className="fw-semibold text-light">Location</div>
@@ -259,7 +316,7 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <hr className="my-4" style={{ borderColor: "rgba(255,255,255,0.1)" }} />
+                  <hr className="my-3" style={{ borderColor: "rgba(255,255,255,0.1)" }} />
 
                   <div className="text-start">
                     <h6 className="fw-bold mb-3" style={{ color: "#00e0ff" }}>
