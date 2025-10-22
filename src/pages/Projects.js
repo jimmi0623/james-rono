@@ -9,6 +9,7 @@ import temsImg from '../assets/tems.png';
 import ctoImg from '../assets/cto.png';
 import portImg from '../assets/port.png';
 import cqcImg from '../assets/cqc.png';
+import wslImg from '../assets/wsl.png';
 
 const Projects = () => {
   const projects = [
@@ -17,7 +18,7 @@ const Projects = () => {
       title: 'Portfolio',
       description:
         'A responsive portfolio site built with a modern tech stack showcasing my full stack engineering skills and competencies.',
-      technologies: ['React', 'Node.js', 'Framer Motion'],
+      technologies: ['React', 'Node.js', 'Framer Motion', 'EmailJs'],
       github: 'https://github.com/jimmi0623/portfolio',
       demo: null,
       image: portImg,
@@ -52,9 +53,19 @@ const Projects = () => {
       demo: null,
       image: ctoImg,
     },
+	{
+      id: 5,
+      title: 'Docker and wsl repair script',
+      description:
+        'Automation - a powershell script that troubleshoots and repairs common errors on Docker and Windows Subsystem for Linux common.',
+      technologies: ['Powershell', 'Docker', 'wsl'],
+      github: 'https://github.com/jimmi0623/caption_timing_optimizer',
+      demo: null,
+      image: wslImg,
+    },
 
     {
-      id: 5,
+      id: 6,
       title: 'Video Caption Quality Checker',
       description:
         'AI-powered caption quality checker that detects timing errors, overlaps, and readability issues in subtitles.',
