@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Container, Row, Col, Card, Badge, Image } from 'react-bootstrap';
 import { FaCogs, FaBrain } from 'react-icons/fa';
 import AnimatedBackground from "../components/AnimatedBackground"; 
-
+import pPic from '../assets/profilepic.JPG';
 const About = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -97,7 +97,7 @@ const About = () => {
                 }}
               />
               <Image
-                src="/profilepic.JPG"
+                src= {pPic}
                 roundedCircle
                 alt="Profile"
                 style={{
