@@ -119,14 +119,14 @@ const Home = () => {
                 <br />
 <motion.span
   style={{
+    WebkitBackgroundClip: "unset",
+    WebkitTextFillColor: "#00e5ff", // override inherited transparent
+    color: "#00e5ff",
     display: "inline-block",
     fontSize: "1.2rem",
     fontWeight: 600,
-    color: "#00e5ff",
-    textShadow: "0 0 6px rgba(0, 229, 255, 0.3)",
+    textShadow: "0 0 3px rgba(0,229,255,0.5)",
   }}
-  animate={{ opacity: [1, 0.85, 1] }}
-  transition={{ duration: 2, repeat: Infinity }}
 >
   Full Stack Developer • AI Integrator
 </motion.span>
