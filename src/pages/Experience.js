@@ -19,42 +19,10 @@ const Experience = () => {
         'Collaborated with cross-functional teams to design, build, and maintain end-to-end software solutions',
       ],
     },
-    {
-      company: 'Apollo Agriculture',
-      position: 'AI Evaluator & Data Annotator',
-      period: 'Apr 2025 – Jul 2025',
-      description:
-        'Evaluated AI-generated farmer advisories and improved model accuracy through dataset refinement.',
-      achievements: [
-        'Improved model precision by 10% through targeted dataset enhancements',
-        'Refined prompt templates for agronomic classification and forecasting',
-        'Collaborated with ML engineers to ensure high-quality AI outputs',
-      ],
-    },
-    {
-      company: 'Office of the Data Protection Commissioner',
-      position: 'AI Evaluator',
-      period: 'Feb 2024 – May 2024',
-      description:
-        'Supported the rollout of the “Linda Data” chatbot by localizing datasets and evaluating AI responses.',
-      achievements: [
-        'Localized Swahili training data for improved chatbot performance',
-        'Conducted QA testing and feedback loops for AI model responses',
-        'Enhanced language coverage and accuracy across multiple user scenarios',
-      ],
-    },
-    {
-      company: 'Kuzi Project',
-      position: 'AI Data Contributor',
-      period: 'Sep 2024 – Nov 2024',
-      description:
-        'Contributed to locust forecasting AI models through geospatial and satellite imagery annotation.',
-      achievements: [
-        'Boosted model precision by 12% via accurate dataset labeling',
-        'Annotated satellite and geospatial data using Label Studio and QGIS',
-        'Supported model validation and consistency checks for agricultural forecasting',
-      ],
-    },
+	
+    
+    
+    
   ];
 
   const summarized = [
@@ -252,6 +220,7 @@ const Experience = () => {
 
             {/* Summarized older experience */}
             <Col xs={12}>
+				{/*
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -295,6 +264,7 @@ const Experience = () => {
                   </Card.Body>
                 </Card>
               </motion.div>
+				*/}
             </Col>
           </Row>
         </div>
