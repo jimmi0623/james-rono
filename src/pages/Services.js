@@ -2,8 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import {
-  FaBrain, FaCodeBranch, FaCloudUploadAlt, FaNetworkWired,
-  FaChartLine, FaPalette, FaLock, FaCogs, FaShoppingCart, FaCreditCard
+  FaCodeBranch, FaCloudUploadAlt, FaShoppingCart, FaCreditCard
 } from 'react-icons/fa';
 import AnimatedBackground from "../components/AnimatedBackground"; 
 
