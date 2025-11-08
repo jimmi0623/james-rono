@@ -19,10 +19,6 @@ const Experience = () => {
         'Collaborated with cross-functional teams to design, build, and maintain end-to-end software solutions',
       ],
     },
-	
-    
-    
-    
   ];
 
   const summarized = [
@@ -39,6 +35,7 @@ const Experience = () => {
       }}
     >
       <AnimatedBackground />
+
       <Container>
         {/* Section Header */}
         <Row className="mb-5 text-center">
@@ -80,7 +77,7 @@ const Experience = () => {
           ></div>
 
           <Row className="g-4">
-            {/* First four detailed experiences */}
+            {/* Detailed Experience */}
             {experiences.map((exp, index) => (
               <Col key={index} xs={12}>
                 <motion.div
@@ -220,7 +217,8 @@ const Experience = () => {
 
             {/* Summarized older experience */}
             <Col xs={12}>
-				{/*
+              {/* Uncomment to display summarized experience */}
+              {/*
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -258,13 +256,13 @@ const Experience = () => {
                     </h5>
                     {summarized.map((exp, idx) => (
                       <p key={idx} style={{ marginBottom: '0.4rem', fontSize: '0.9rem', color: '#e2e8f0' }}>
-                        <strong>{exp.position}</strong>, {exp.company} 
+                        <strong>{exp.position}</strong>, {exp.company}
                       </p>
                     ))}
                   </Card.Body>
                 </Card>
               </motion.div>
-				*/}
+              */}
             </Col>
           </Row>
         </div>
