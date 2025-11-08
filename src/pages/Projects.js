@@ -10,10 +10,12 @@ import ctoImg from '../assets/cto.png';
 import portImg from '../assets/port.png';
 import cqcImg from '../assets/cqc.png';
 import wslImg from '../assets/wsl.png';
+import eCom from '../assets/ecommerce.png';
+
 
 const Projects = () => {
   const projects = [
-        {
+     {
       id: 1,
       title: 'Portfolio',
       description:
@@ -23,8 +25,18 @@ const Projects = () => {
       demo: null,
       image: portImg,
     },
-    {
+     {
       id: 2,
+      title: 'E-commerce',
+      description:
+        'A Fully functional e-commerce app with Mpesa payment intergration.',
+      technologies: ['React + NodeJs', 'SQL.Js', 'Vite', 'Zustand','ExpressJs'],
+      github: '',
+      demo: null,
+      image: eCom,
+    },	
+    {
+      id: 3,
       title: 'Video Annotator',
       description:
         'A web-based tool for annotating videos frame by frame with customizable labels & metadata export, YOLOv8 Integration, Object Tracking, SAM Integration & Batch processing.',
