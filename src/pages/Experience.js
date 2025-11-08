@@ -21,10 +21,6 @@ const Experience = () => {
     },
   ];
 
-  const summarized = [
-    { company: 'Safaricom Plc', position: 'Data Analyst', period: 'Oct 2014 – 2020' },
-    { company: 'Kenya National Bureau of Statistics', position: 'Research Assistant', period: 'Apr 2011 – Jul 2014' },
-  ];
 
   return (
     <section
@@ -216,54 +212,7 @@ const Experience = () => {
             ))}
 
             {/* Summarized older experience */}
-            <Col xs={12}>
-              {/* Uncomment to display summarized experience */}
-              {/*
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0.9 }}
-              >
-                <Card
-                  className="border-0 shadow-sm mb-4 ms-4 position-relative"
-                  style={{
-                    background: 'rgba(255,255,255,0.04)',
-                    borderRadius: '1rem',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    boxShadow: '0 0 12px rgba(0,191,255,0.05)',
-                    backdropFilter: 'blur(12px)',
-                  }}
-                >
-                  <div
-                    className="position-absolute bg-info rounded-circle text-white d-flex align-items-center justify-content-center"
-                    style={{
-                      left: '-22px',
-                      top: '28px',
-                      width: '28px',
-                      height: '28px',
-                      boxShadow:
-                        '0 0 12px rgba(0,191,255,0.5), 0 0 24px rgba(0,255,255,0.25)',
-                    }}
-                  >
-                    <FaBriefcase size={14} />
-                  </div>
-                  <Card.Body className="p-4">
-                    <h5
-                      className="fw-semibold mb-3"
-                      style={{ color: '#00d4ff', fontSize: '1rem' }}
-                    >
-                      Other Experiences
-                    </h5>
-                    {summarized.map((exp, idx) => (
-                      <p key={idx} style={{ marginBottom: '0.4rem', fontSize: '0.9rem', color: '#e2e8f0' }}>
-                        <strong>{exp.position}</strong>, {exp.company}
-                      </p>
-                    ))}
-                  </Card.Body>
-                </Card>
-              </motion.div>
-              */}
-            </Col>
+
           </Row>
         </div>
       </Container>
