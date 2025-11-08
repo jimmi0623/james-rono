@@ -286,7 +286,7 @@ const Contact = () => {
                           className="text-decoration-none"
                           style={{ color: "#a0aec0" }}
                         >
-                          (+254) 788 923 238
+                          (+254) 745 143 483
                         </a>
                       </div>
                     </div>
