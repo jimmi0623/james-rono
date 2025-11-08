@@ -18,6 +18,8 @@ const Education = () => {
         'Artificial Intelligence',
         'Database Management Systems',
         'Systems Analysis & Design',
+		'Object Oriented Programming',
+		'Distributed Systems',
         'Computer Programming',
       ],
     },
@@ -186,7 +188,7 @@ const Education = () => {
                           }}
                         >
                           <FaCalendarAlt className="me-2 text-info" />
-                          <span>{edu.period}</span>
+                          <span>{/*edu.period*/}</span>
                         </div>
                       </Col>
                     </Row>

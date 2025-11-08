@@ -11,61 +11,38 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: 'AI-Powered Web Solutions',
-      description: 'Next-gen web apps that leverage AI APIs, LLMs, and smart automation for personalized user experiences.',
-      icon: <FaBrain size={40} />,
-      color: '#6C63FF'
-    },
-    {
-      id: 2,
-      title: 'Full-Stack Application Engineering',
-      description: 'End-to-end development using React, Node.js, and cloud-native architectures optimized for scalability and speed.',
+      title: 'Custom Web Applications',
+      description:
+        'We build high-performance web solutions using React, Node.js, and modern frameworks—tailored to your business needs, scalable, and cloud-ready.',
       icon: <FaCodeBranch size={40} />,
       color: '#007BFF'
     },
     {
+      id: 2,
+      title: 'E-Commerce & Portfolio Websites',
+      description:
+        'Beautiful, responsive online stores and personal portfolio sites optimized for conversion, performance, and SEO visibility.',
+      icon: <FaShoppingCart size={40} />,
+      color: '#6C63FF'
+    },
+    {
       id: 3,
-      title: 'Cloud & DevOps Integration',
-      description: 'CI/CD pipelines, Docker, and cloud deployments (AWS, Vercel, Azure) for continuous delivery and uptime reliability.',
-      icon: <FaCloudUploadAlt size={40} />,
-      color: '#00B4D8'
+      title: 'Payment API Integration',
+      description:
+        'Seamless and secure integration with major payment gateways including M-Pesa, Stripe, and Paystack—built with reliability and compliance in mind.',
+      icon: <FaCreditCard size={40} />,
+      color: '#48CAE4'
     },
     {
       id: 4,
-      title: 'Next-Gen API & Microservices',
-      description: 'High-performance APIs, GraphQL, and microservice design for modular, maintainable systems.',
-      icon: <FaNetworkWired size={40} />,
+      title: 'SEO & Cloud Optimization',
+      description:
+        'Boost your visibility and performance through technical SEO, analytics, and optimized hosting on Vercel, AWS, or Azure with CI/CD pipelines.',
+      icon: <FaCloudUploadAlt size={40} />,
       color: '#3A0CA3'
-    },
-    {
-      id: 5,
-      title: 'Data-Driven Interfaces & Dashboards',
-      description: 'Interactive dashboards, real-time analytics, and data visualizations powered by React and D3.js.',
-      icon: <FaChartLine size={40} />,
-      color: '#4CC9F0'
-    },
-    {
-      id: 6,
-      title: 'UI/UX Innovation & Design Systems',
-      description: 'Human-centered design, component libraries, and accessibility-first interfaces built with Figma & Tailwind CSS.',
-      icon: <FaPalette size={40} />,
-      color: '#F72585'
-    },
-    {
-      id: 7,
-      title: 'Secure & Scalable Backend Systems',
-      description: 'Modern backend infrastructure with JWT auth, API rate-limiting, and cloud-level data security.',
-      icon: <FaLock size={40} />,
-      color: '#4895EF'
-    },
-    {
-      id: 8,
-      title: 'Automation & Integration Services',
-      description: 'Integrations with 3rd-party APIs, AI assistants, payments, and business automation workflows.',
-      icon: <FaCogs size={40} />,
-      color: '#48CAE4'
     }
   ];
+};
 
   return (
     <section

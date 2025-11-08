@@ -117,18 +117,19 @@ const Home = () => {
                   James Rono
                 </motion.span>
                 <br />
-                <motion.span
-                  style={{
-                    display: "inline-block",
-                    fontSize: "1.2rem",
-                    color: "#00e5ff",
-                    textShadow: "0 0 10px rgba(0,255,255,0.4)",
-                  }}
-                  animate={{ opacity: [0.7, 1, 0.7] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                >
-                  Full Stack Developer • AI Integrator
-                </motion.span>
+<motion.span
+  style={{
+    display: "inline-block",
+    fontSize: "1.2rem",
+    fontWeight: 600,
+    color: "#00e5ff",
+    textShadow: "0 0 6px rgba(0, 229, 255, 0.3)",
+  }}
+  animate={{ opacity: [1, 0.85, 1] }}
+  transition={{ duration: 2, repeat: Infinity }}
+>
+  Full Stack Developer • AI Integrator
+</motion.span>
               </h1>
 
               <p
