@@ -11,7 +11,7 @@ import portImg from '../assets/port.png';
 import cqcImg from '../assets/cqc.png';
 import wslImg from '../assets/wsl.png';
 import eCom from '../assets/ecommerce.png';
-
+import gHub from '../assets/gighub.png';
 
 const Projects = () => {
   const projects = [
@@ -34,9 +34,19 @@ const Projects = () => {
       github: '',
       demo: null,
       image: eCom,
+    },
+     {
+      id: 3,
+      title: 'GigHub',
+      description:
+        'A SaaS site that connects Gigworkers to clients.',
+      technologies: ['React', 'Node.js', 'Typescript', 'PostgreSQL'],
+      github: '',
+      demo: null,
+      image: gHub,
     },	
     {
-      id: 3,
+      id: 4,
       title: 'Video Annotator',
       description:
         'A web-based tool for annotating videos frame by frame with customizable labels & metadata export, YOLOv8 Integration, Object Tracking, SAM Integration & Batch processing.',
@@ -46,7 +56,7 @@ const Projects = () => {
       image: vaImg,
     },
     {
-      id: 3,
+      id: 5,
       title: 'Ticketing and Events Platform',
       description:
         'A ticketing and event management platform supporting user authentication and real-time booking.',
@@ -56,7 +66,7 @@ const Projects = () => {
       image: temsImg,
     },
     {
-      id: 4,
+      id: 6,
       title: 'Caption Timing Optimizer',
       description:
         'An intelligent tool for automatically adjusting subtitle and caption timings for better synchronization.',
@@ -66,7 +76,7 @@ const Projects = () => {
       image: ctoImg,
     },
 	{
-      id: 5,
+      id: 7,
       title: 'Docker and wsl repair script',
       description:
         'Automation - a powershell script that troubleshoots and repairs common errors on Docker and Windows Subsystem for Linux common.',
@@ -77,7 +87,7 @@ const Projects = () => {
     },
 
     {
-      id: 6,
+      id: 8,
       title: 'Video Caption Quality Checker',
       description:
         'AI-powered caption quality checker that detects timing errors, overlaps, and readability issues in subtitles.',
